@@ -10,7 +10,7 @@ dotenv.config();
 
 
 const server = express();
-const PORT = 3000;
+const PORT = 3100;
 
 server.use(express.json());
 server.use(cors());
@@ -39,5 +39,5 @@ server.use("/transactions", verifyAuthorization, transactionsRouter);
 await connectViaMongoose();
 
 server.listen(PORT, () => {
-    console.log("server listening on port 3000")
+    console.log("server listening on port 3100")
 });
